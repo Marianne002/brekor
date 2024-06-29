@@ -10,6 +10,11 @@ const Home = () => {
 
   return (
     <>
+      <title>Plateforme pour Artistes Amateurs - Brekor</title>
+      <meta name="description" content="Rejoignez Brekor, la plateforme pour artistes amateurs. Vendez, achetez et louez des œuvres d'art en ligne.
+" />
+      <meta name="keywords" content="artiste amateur en ligne" />
+
       <Navbar />
       <Feed userId={session?.user?.id} />
     </>

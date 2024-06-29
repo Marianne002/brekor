@@ -65,6 +65,10 @@ const ShopContent = () => {
 
     return (
         <>
+            <title>Shop - Brekor</title>
+            <meta name="description" content="Découvrez et achetez des œuvres d'art uniques sur Brekor. Explorez la boutique d'artistes talentueux et trouvez l'inspiration." />
+            <meta name="keywords" content="acheter art, boutique d'art en ligne, Brekor, œuvres d'art uniques" />
+
             <Navbar />
             {profileId && (
                 <h1 className="title-list">

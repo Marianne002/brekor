@@ -115,6 +115,10 @@ const UpdateWorkContent = () => {
 
     return loading ? <Loader /> : (
         <>
+            <title>Modifier le travail - Brekor</title>
+            <meta name="description" content="Modifiez les détails d'une œuvre d'art sur Brekor. Mettez à jour la catégorie, le titre, la description, le prix et les photos pour offrir une expérience artistique enrichissante." />
+            <meta name="keywords" content="modifier œuvre d'art, mise à jour œuvre, éditer catégorie œuvre, modifier titre, actualiser description œuvre, modifier prix art, télécharger photos art" />
+            
             <Navbar />
             <Form
                 type="Edit"

@@ -1,24 +1,21 @@
 // app/layout.jsx
 import "@styles/globals.css";
 import Provider from "@components/Provider";
+import GTM from "@components/GTM";
 
-export const metadata = {
-  title: "BREKOR",
-  description: "BREKOR - Faites briller votre créativité !",
-}
-
-const layout = ({children}) => {
+const layout = ({ children }) => {
   return (
     <html lang="fr">
+      <head>
+        <GTM />
+      </head>
       <body>
         <Provider>
-          <main>
-            {children}
-          </main>
+          <main>{children}</main>
         </Provider>
       </body>
     </html>
-  )
-}
+  );
+};
 
 export default layout;

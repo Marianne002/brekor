@@ -68,6 +68,10 @@ const Wishlist = () => {
   console.log("creator work name", wishlist[0]?.creator?.name);
   return (
     <>
+      <title>Liste de souhait - Brekor</title>
+      <meta name="description" content="Découvrez et organisez vos œuvres d'art préférées en ligne." />
+      <meta name="keywords" content="liste de souhait" />
+
       <Navbar />
       <h1 className="title-list">Your Wishlist</h1>
       {wishlist.length > 0 ? (

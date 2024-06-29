@@ -46,36 +46,42 @@ const Login = () => {
     };
 
     return (
-        <div className="login">
-            <img src="/assets/login.jpg" alt="login" className="login_decor" />
-            <div className="login_content">
-                <form className="login_content_form" onSubmit={handleSubmit}>
-                    <input
-                        placeholder="Email"
-                        name="email"
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                    />
-                    <input
-                        placeholder="Password"
-                        name="password"
-                        type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required
-                    />
-                    {error && <p className="error">{error}</p>}
-                    <button type="submit">Log In</button>
-                </form>
-                <button className="google" onClick={loginWithGoogle}>
-                <p>Log In with Google</p>
-                <FcGoogle />
-                </button>
-                <a href="/register">Don't have an account? Sign In Here</a>
+        <>
+            <title>Connexion - Brekor</title>
+            <meta name="description" content="Accédez à votre compte et explorez une gamme d'œuvres d'art uniques en ligne." />
+            <meta name="keywords" content="connexion, compte, plateforme d'art en ligne, se connecter à Brekor, artistes amateurs" />
+
+            <div className="login">
+                <img src="/assets/login.jpg" alt="login" className="login_decor" />
+                <div className="login_content">
+                    <form className="login_content_form" onSubmit={handleSubmit}>
+                        <input
+                            placeholder="Email"
+                            name="email"
+                            type="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                        />
+                        <input
+                            placeholder="Password"
+                            name="password"
+                            type="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                        />
+                        {error && <p className="error">{error}</p>}
+                        <button type="submit">Log In</button>
+                    </form>
+                    <button className="google" onClick={loginWithGoogle}>
+                    <p>Log In with Google</p>
+                    <FcGoogle />
+                    </button>
+                    <a href="/register">Don't have an account? Sign In Here</a>
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 
