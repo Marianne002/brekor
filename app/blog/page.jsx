@@ -6,21 +6,24 @@ import Link from 'next/link';
 import Navbar from '@components/Navbar';
 
 async function getPosts() {
+  // Get all posts from the posts directory
   const postsDirectory = path.join(process.cwd(), 'posts');
   const filenames = fs.readdirSync(postsDirectory);
 
+  // Get the content of each post
   const posts = filenames.map((filename) => {
     const filePath = path.join(postsDirectory, filename);
     const fileContents = fs.readFileSync(filePath, 'utf8');
     const { data } = matter(fileContents);
 
+    // Return the post data
     return {
       slug: filename.replace(/\.md$/, ''),
       ...data,
     };
   });
 
-  // Trier les articles par ordre spécifié dans les métadonnées YAML
+  // Sort posts by order
   posts.sort((a, b) => (a.order || 0) - (b.order || 0));
 
   return posts;

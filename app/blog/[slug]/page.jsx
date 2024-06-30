@@ -5,16 +5,19 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
 import Navbar from '@components/Navbar';
-import QuizForm from '../../../components/QuizForm'; // Correct import path
-import QuizResult from '../../../components/QuizResult'; // Correct import path
+import QuizForm from '../../../components/QuizForm';
+import QuizResult from '../../../components/QuizResult';
 
 async function getPost(slug) {
+  // Get the content of the post
   const postsDirectory = path.join(process.cwd(), 'posts');
   const filePath = path.join(postsDirectory, `${slug}.md`);
   const fileContents = fs.readFileSync(filePath, 'utf8');
 
+  // Parse the post metadata and content
   const { data, content } = matter(fileContents);
 
+  // Convert the post content to HTML
   const processedContent = await remark().use(html).process(content);
   const contentHtml = processedContent.toString();
 
@@ -37,7 +40,7 @@ const BlogPost = async ({ params }) => {
       <h1>{post.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: post.content }} />
 
-      <QuizForm />
+      {params.slug === 'quiz-trouvez-votre-mouvement-artistique' && <QuizForm />}
     </>
   );
 };
