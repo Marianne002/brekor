@@ -98,6 +98,11 @@ const WorkDetailsContent = () => {
         setCurrentIndex(index);
     };
 
+    // Update selectedPhoto when currentIndex changes
+    useEffect(() => {
+        setSelectedPhoto(currentIndex);
+    }, [currentIndex]);
+
     // Get the router object
     const router = useRouter();
 
@@ -136,40 +141,46 @@ const WorkDetailsContent = () => {
                     )}
                 </div>
 
-                <div className="slider-container">
-                    <div
-                        className="slider"
-                        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-                    >
-                        {work.workPhotoPaths?.map((photo, index) => (
-                            <div className="slide" key={index}>
-                                <img src={photo} alt={`work-${index}`} />
-                                <div className="prev-button" onClick={goToPrevSlide}>
-                                    <ArrowBackIosNew sx={{ fontSize: "15px" }} />
+                <div className="slider-work">
+                    {work.workPhotoPaths?.length > 1 && (
+                        <div className="prev-button" onClick={goToPrevSlide}>
+                            <ArrowBackIosNew sx={{ fontSize: "15px" }} />
+                        </div>
+                    )}
+                    <div className="slider-container">
+                        <div
+                            className="slider"
+                            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                        >
+                            {work.workPhotoPaths?.map((photo, index) => (
+                                <div className="slide" key={index}>
+                                    <img src={photo} alt={`work-${index}`} />
                                 </div>
-                                <div className="next-button" onClick={goToNextSlide}>
-                                    <ArrowForwardIos sx={{ fontSize: "15px" }} />
-                                </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
+                    {work.workPhotoPaths?.length > 1 && (
+                        <div className="next-button" onClick={goToNextSlide}>
+                            <ArrowForwardIos sx={{ fontSize: "15px" }} />
+                        </div>
+                    )}
                 </div>
 
                 <div className="photos">
                     {work.workPhotoPaths?.slice(0, visiblePhotos).map((photo, index) => (
                         <img
-                        src={photo}
-                        alt="work-demo"
-                        key={index}
-                        onClick={() => handleSelectedPhoto(index)}
-                        className={selectedPhoto === index ? "selected" : ""}
+                            src={photo}
+                            alt="work-demo"
+                            key={index}
+                            onClick={() => handleSelectedPhoto(index)}
+                            className={selectedPhoto === index ? "selected" : ""}
                         />
                     ))}
 
                     {visiblePhotos < work.workPhotoPaths.length && (
                         <div className="show-more" onClick={loadMorePhotos}>
-                        <ArrowForwardIos sx={{ fontSize: "40px" }} />
-                        Show More
+                            <ArrowForwardIos sx={{ fontSize: "40px" }} />
+                            Show More
                         </div>
                     )}
                 </div>
