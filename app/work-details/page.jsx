@@ -119,6 +119,10 @@ const WorkDetailsContent = () => {
 
     return (
         <>
+            <title>{work.title}</title>
+            <meta name="description" content={work.description} />
+            <meta name="keywords" content="art" />
+
             <Navbar />
             <div className="work-details">
                 <div className="title">
