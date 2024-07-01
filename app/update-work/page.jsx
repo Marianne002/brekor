@@ -4,6 +4,7 @@ import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Loader from "@components/Loader";
 import Form from "@components/Form";
+import Footer from "@components/Footer";
 import Navbar from "@components/Navbar";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";

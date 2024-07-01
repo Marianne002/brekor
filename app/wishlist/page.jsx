@@ -1,6 +1,7 @@
 // app/wishlist/page.jsx
 "use client";
 import "@styles/Wishlist.scss";
+import Footer from "@components/Footer";
 import Navbar from "@components/Navbar";
 import Loader from "@components/Loader";
 import WorkList from "@components/WorkList";
