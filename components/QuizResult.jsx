@@ -4,7 +4,8 @@ import React from 'react';
 
 const QuizResult = ({ answers }) => {
   const calculateResult = () => {
-    if (!answers) return ''; // Vérifiez si answers est défini
+    // Check if answers are provided
+    if (!answers) return '';
 
     // Calcul number of answers for each category
     const counts = {

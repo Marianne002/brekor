@@ -79,6 +79,7 @@ const Wishlist = () => {
       ) : (
         <p>Your wishlist is empty.</p>
       )}
+      <Footer />
     </>
   );
 };

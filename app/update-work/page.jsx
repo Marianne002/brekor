@@ -126,6 +126,7 @@ const UpdateWorkContent = () => {
                 setWork={setWork}
                 handleSubmit={handleSubmit}
             />
+            <Footer />
         </>
     );
 };

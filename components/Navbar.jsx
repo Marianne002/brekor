@@ -36,9 +36,15 @@ const Navbar = () => {
     const cart = user?.cart;
 
     return (
-        <div className='navbar'>
+        <div 
+            className="navbar" 
+            aria-label="Menu de navigation"
+        >
             <a href="/">
-                <img src='/assets/logo-brekor.svg' alt='Logo Brekor'/>
+                <img 
+                    src='/assets/logo-brekor.svg' 
+                    alt='Logo Brekor'
+                />
             </a>
 
             <div className='navbar_search'>

@@ -4,6 +4,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
+import Footer from '@components/Footer';
 import Navbar from '@components/Navbar';
 import QuizForm from '../../../components/QuizForm';
 import QuizResult from '../../../components/QuizResult';
@@ -37,10 +38,13 @@ const BlogPost = async ({ params }) => {
       <meta name="keywords" content={post.keywords} />
 
       <Navbar />
-      <h1>{post.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.content }} />
+      <section className="container">
+        <h1>{post.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: post.content }} />
 
-      {params.slug === 'quiz-trouvez-votre-mouvement-artistique' && <QuizForm />}
+        {params.slug === 'quiz-trouvez-votre-mouvement-artistique' && <QuizForm />}
+      </section>
+      <Footer/>
     </>
   );
 };

@@ -3,6 +3,7 @@
 
 import React, { useState } from 'react';
 import Form from '@components/Form';
+import Footer from '@components/Footer';
 import Navbar from '@components/Navbar';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
@@ -94,6 +95,7 @@ const CreateWork = () => {
                 setWork={setWork}
                 handleSubmit={handleSubmit}
             />
+            <Footer />
         </>
     );
 }

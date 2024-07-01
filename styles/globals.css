@@ -1,20 +1,25 @@
-
-html,
-body {
+/* GENERAL */
+*, *::after,*::before{
   padding: 0;
   margin: 0;
-  font-family: Averta, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-h1, h2, h3, h4, h5, p {
-  margin: 0;
-}
-
-* {
   box-sizing: border-box;
+  /* scrollbar-width: none !important; */
 }
+body{
+  font-family: 'Poppins', sans-serif;
+}
+h1, h2, h3, a button {
+  font-family: "hoss-round", sans-serif;
+}
+a {
+  text-decoration: none !important;
+}
+
+/* BACKGROUND */
+.bg-darker {
+  background-image: url('/assets/background-blog.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+

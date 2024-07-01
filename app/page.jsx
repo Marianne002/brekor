@@ -2,6 +2,7 @@
 "use client";
 import Navbar from "@components/Navbar";
 import Feed from "@components/Feed";
+import Footer from "@components/Footer";
 import { useSession } from "next-auth/react";
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
 
       <Navbar />
       <Feed userId={session?.user?.id} />
+      <Footer />
     </>
   );
 };

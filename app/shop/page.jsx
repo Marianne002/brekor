@@ -4,6 +4,7 @@ import "@styles/Shop.scss";
 import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Loader from "@components/Loader";
+import Footer from "@components/Footer";
 import Navbar from "@components/Navbar";
 import WorkList from "@components/WorkList";
 import { useSession } from "next-auth/react";
@@ -76,6 +77,7 @@ const ShopContent = () => {
                 </h1>
             )}
             <WorkList data={workList} userId={userId} onDeleteWork={handleWorkDelete} />
+            <Footer />
         </>
     );
 };

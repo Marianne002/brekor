@@ -3,6 +3,7 @@
 import "@styles/WorkDetails.scss";
 import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import Footer from "@components/Footer";
 import Loader from "@components/Loader";
 import Navbar from "@components/Navbar";
 import {
@@ -192,6 +193,7 @@ const WorkDetailsContent = () => {
                     ADD TO CART
                 </button>
             </div>
+            <Footer />
         </>
     );
 };
