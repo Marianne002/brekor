@@ -141,7 +141,7 @@ const WorkDetailsContent = () => {
                     )}
                 </div>
 
-                <div className="slider-work">
+                <div className="slider-work d-flex align-items-center justify-content-center">
                     {work.workPhotoPaths?.length > 1 && (
                         <div className="prev-button" onClick={goToPrevSlide}>
                             <ArrowBackIosNew sx={{ fontSize: "15px" }} />

@@ -6,9 +6,11 @@ import { useSession } from "next-auth/react";
 import { useState, useEffect } from "react";
 
 const WorkCard = ({ work, userId, updateWishlist, onDeleteWork }) => {
+  // State to store the loading status of the page
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isLiked, setIsLiked] = useState(false);
 
+  // Get the session details
   const { data: session, update } = useSession();
   const router = useRouter();
 
@@ -31,10 +33,12 @@ const WorkCard = ({ work, userId, updateWishlist, onDeleteWork }) => {
     }
   }, [session, work._id]);
 
+  // Function to move to the next slide
   const goToNextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % work.workPhotoPaths.length);
   };
 
+  // Function to move to the previous slide
   const goToPrevSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + work.workPhotoPaths.length) % work.workPhotoPaths.length);
   };
@@ -105,35 +109,41 @@ const WorkCard = ({ work, userId, updateWishlist, onDeleteWork }) => {
         router.push(`/work-details?id=${work._id}&creator=${work.creator._id}`);
       }}
     >
-      <div className="slider-container">
-        <div
-          className="slider"
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-        >
-          {work.workPhotoPaths?.map((photo, index) => (
-            <div className="slide" key={index}>
-              <img src={photo} alt="work" />
-              <div
-                className="prev-button"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  goToPrevSlide(e);
-                }}
-              >
-                <ArrowBackIosNew sx={{ fontSize: "15px" }} />
+      <div className="slider-work d-flex align-items-center justify-content-center">
+        {work.workPhotoPaths.length > 1 && (
+          <div
+            className="prev-button"
+            onClick={(e) => {
+              e.stopPropagation();
+              goToPrevSlide(e);
+            }}
+          >
+            <ArrowBackIosNew sx={{ fontSize: "15px" }} />
+          </div>
+        )}
+        <div className="slider-container">
+          <div
+            className="slider"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          >
+            {work.workPhotoPaths?.map((photo, index) => (
+              <div className="slide" key={index}>
+                <img src={photo} alt="work" />
               </div>
-              <div
-                className="next-button"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  goToNextSlide(e);
-                }}
-              >
-                <ArrowForwardIos sx={{ fontSize: "15px" }} />
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+        {work.workPhotoPaths.length > 1 && (
+          <div
+            className="next-button"
+            onClick={(e) => {
+              e.stopPropagation();
+              goToNextSlide(e);
+            }}
+          >
+            <ArrowForwardIos sx={{ fontSize: "15px" }} />
+          </div>
+        )}
       </div>
 
       <div className="info">
