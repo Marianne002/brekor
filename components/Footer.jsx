@@ -1,8 +1,8 @@
-// components/Navbar.jsx
+// components/Footer.jsx
 "use client";
 import React from 'react';
 
-const Navbar = () => {
+const Footer = () => {
 
     return (
         <footer id="footer" className="container gradient-border-footer">
@@ -94,4 +94,4 @@ const Navbar = () => {
     );
 }
 
-export default Navbar;
+export default Footer;
