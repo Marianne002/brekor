@@ -3,7 +3,6 @@
 @import "./breakpoints.scss";
 
 .form {
-  background-color: $lightgrey;
   padding: 40px 60px 120px;
 
   @include mm {
@@ -16,7 +15,7 @@
   }
 
   form {
-    background-color: white;
+    background-color: #222;
     padding: 30px 40px;
     border-radius: 20px;
 

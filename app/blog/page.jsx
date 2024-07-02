@@ -1,5 +1,6 @@
 // app/blog/page.jsx
 import "@styles/Blog.scss";
+import "@styles/StaticPage.scss";
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';

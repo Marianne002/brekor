@@ -93,10 +93,10 @@ const QuizForm = () => {
     <form>
       {!submitted ? (
         currentStep === 0 ? (
-          <div className="card mb-4">
-            <div className="card-body">
+          <div className="quiz-card mb-4">
+            <div className="quiz-card-body d-flex flex-column">
               <h2>A vous de jouez !</h2>
-              <button className="btn btn-primary mt-3" onClick={handleNext}>Commencer le Quiz</button>
+              <button className="btn-gradient mt-3" onClick={handleNext}>Commencer le Quiz</button>
             </div>
           </div>
         ) : (

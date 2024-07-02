@@ -11,6 +11,9 @@ body{
 h1, h2, h3, a button {
   font-family: "hoss-round", sans-serif;
 }
+/* h1, h2, h3, h4, h5, p, span, ul, ol, li, a, a button {
+  color: white !important;
+} */
 a {
   text-decoration: none !important;
 }
