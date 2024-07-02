@@ -81,6 +81,7 @@
         img {
           width: auto;
           height: 270px;
+          border-radius: 15px;
         }
 
         .prev-button,
@@ -124,10 +125,11 @@
       cursor: pointer;
       width: 150px;
       height: auto;
+      border-radius: 15px;
     }
 
     .selected {
-      border: 3px black solid;
+      border: 3px #FF1493 solid;
     }
 
     .show-more {

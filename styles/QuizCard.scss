@@ -1,0 +1,16 @@
+// styles/QuizCard.scss
+.quiz-card {
+    max-width: 600px;
+    width: 100%;
+    border-radius: 25px !important;
+    background: #25272D;
+    color: white;
+    padding: 25px;
+    
+    p {
+        padding: 10px;
+    }
+    input {
+        display: none;
+    }
+}

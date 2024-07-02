@@ -1,4 +1,5 @@
 // app/politique-de-confidentialite/page.jsx
+import "@styles/StaticPage.scss";
 import React from 'react';
 import Footer from '@components/Footer';
 import Navbar from '@components/Navbar';

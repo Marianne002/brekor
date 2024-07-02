@@ -40,19 +40,21 @@ const BlogPost = async ({ params }) => {
 
       <Navbar />
       <div className="navbar-padding-protection"></div>
-      <section className="container gradient-border d-flex flex-column align-items-center">
-        <h1>{post.title}</h1>
-        {post.postImage && 
-          <img 
-            src={post.postImage} 
-            alt={`Image de ${post.title}`} 
-            className="post-img img-fluid mx-auto m-4"
-          />
-        }
-        <div className="post-content" dangerouslySetInnerHTML={{ __html: post.content }} />
+      <div className="container p-0">
+        <section className="gradient-border d-flex flex-column align-items-center">
+          <h1>{post.title}</h1>
+          {post.postImage && 
+            <img 
+              src={post.postImage} 
+              alt={`Image de ${post.title}`} 
+              className="post-img img-fluid mx-auto m-4"
+            />
+          }
+          <div className="post-content" dangerouslySetInnerHTML={{ __html: post.content }} />
 
-        {params.slug === 'quiz-trouvez-votre-mouvement-artistique' && <QuizForm />}
-      </section>
+          {params.slug === 'quiz-trouvez-votre-mouvement-artistique' && <QuizForm />}
+        </section>
+      </div>
       <Footer />
     </>
   );

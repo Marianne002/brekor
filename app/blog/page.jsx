@@ -41,26 +41,28 @@ const Blog = async () => {
 
       <Navbar />
       <div className="navbar-padding-protection"></div>
-      <section className="container gradient-border">
-        <h1>Blog</h1>
-        <ul className='row d-flex justify-content-center gap-4'>
-          {posts.map((post) => (
-            <li key={post.slug} className="col-4 blog-card p-0">
-              <a 
-                href={`/blog/${post.slug}`} 
-                className='d-flex flex-column justify-content-around'
-              >
-                <img 
-                  src={post.blogImage} 
-                  alt="Image de l'article" 
-                  className="img-fluid mx-auto" 
-                />
-                <p><strong>{post.title}</strong></p>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
+      <div className="container p-0">
+        <section className="gradient-border">
+          <h1>Blog</h1>
+          <ul className='row d-flex justify-content-center gap-4'>
+            {posts.map((post) => (
+              <li key={post.slug} className="col-4 blog-card p-0">
+                <a 
+                  href={`/blog/${post.slug}`} 
+                  className='d-flex flex-column justify-content-around'
+                >
+                  <img 
+                    src={post.blogImage} 
+                    alt="Image de l'article" 
+                    className="img-fluid mx-auto" 
+                  />
+                  <p><strong>{post.title}</strong></p>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </div>
       <Footer />
     </>
   );

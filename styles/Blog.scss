@@ -1,19 +1,10 @@
 // styles/Blog.scss
-* {
-    color: #fff;
+h1, h2, h3, h4, h5, p, ul, ol, li, a, a button {
+    color: white !important;
 }
-/* BACKGROUND */
-.bg-darker {
-  background-image: url('/assets/background-blog.svg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
- 
 .blog-card {
     border-radius: 25px !important;
-    border: 2px solid #545454;
-    background: #222;
+    background: #25272D;
     width: 300px !important;
     
     img {

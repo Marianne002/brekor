@@ -1,98 +1,68 @@
 // styles/Footer.scss
-@import "./variables.module.scss";
-@import "./breakpoints.scss";
 
-.footer {
-  display: flex;
-  justify-content: space-between;
-  gap: 50px;
-  padding: 10px 70px;
+footer {
+  color: white !important;
 
-  @include lg {
-    padding: 10px 30px;
-  }
 
-  &_left {
-    max-width: 400px;
+  /* NEWSLETTER */
+  .input-group {
+    display: flex;
+    width: 403px;
+    height: 45px;
+    flex-shrink: 0;
 
-    img {
-      max-width: 150px;
-      margin-bottom: 20px;
+    input {
+      width: 100%;
+      height: 100%;
+      padding: 10px 15px;
+      border-radius: 30px !important;
     }
-
-    &_socials {
+    input::placeholder {
+      color: #545454;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 36px;
+    }
+    button {
       display: flex;
-      gap: 25px;
-      margin-top: 20px;
-
-      &_icon {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background-color: $pinkred;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        transition: all 0.5s ease-in-out;
-
-        &:hover {
-          transform: scale(1.2);
-        }
-      }
+      justify-content: center;
+      align-items: center;
+      top: -2px;
+      right: -2px;
+      border-radius: 30px !important;
+      padding: 15px 11px !important;
+      height: 45px;
     }
   }
 
-  &_center {
-    text-decoration: none;
-
-    ul {
-      list-style: none;
-      margin-top: 20px;
-      padding: 0;
-      cursor: pointer;
-
-      li {
-        margin-bottom: 10px;
-
-        &:hover {
-          color: $pinkred;
-        }
-      }
-
-      a {
-        text-decoration: none;
-        color: black;
-
-        &:hover {
-          color: $pinkred;
-        }
-      }
-    }
-
-    @include md {
-      display: none;
+  .input-group input,
+  .input-group input:focus,
+  .input-group {
+    border: 2px solid #545454;
+    background: #222 !important;
+    border-radius: 30px !important;
+    color: white;
+    
+    input,
+    input:focus{ 
+      border: none;
+      box-shadow: none;
     }
   }
+}
 
-  &_right {
-    max-width: 350px;
 
-    h3 {
-      margin-bottom: 20px;
-    }
 
-    &_info {
-      display: flex;
 
-      p {
-        margin-left: 20px;
-        margin-bottom: 15px;
-      }
-    }
+/* RESPONSIVE: SMALL SCREENS */
+@media (max-width: 768px) {
+  /* NEWSLETTER */
+  .input-group {
+    height: 35px;
 
-    @include sm {
-      display: none;
+    button {
+      padding: 11.725px 8.598px!important;
+      height: 35px;
     }
   }
 }

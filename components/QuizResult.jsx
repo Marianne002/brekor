@@ -46,10 +46,11 @@ const QuizResult = ({ answers }) => {
   };
 
   return (
-    <div>
-      <h2>Résultats du Quiz</h2>
-      <p>{getResultText()}</p>
-      <p>Partagez vos résultats avec vos amis et explorez plus sur Brekor.</p>
+    <div className="card mb-4">
+      <div className="card-body">
+        <h2>Résultats du Quiz</h2>
+        <span>{getResultText()}</span>
+      </div>
     </div>
   );
 };
