@@ -12,11 +12,6 @@
 }
 
 .navbar {
-  padding: 15px 80px 30px !important;
-  @include sm {
-    padding: 10px;
-  }
-
   &_search {
     border: 1px solid $grey;
     border-radius: 30px;

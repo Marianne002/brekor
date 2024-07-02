@@ -41,9 +41,9 @@ const Login = () => {
     };
 
     // Handle Google login
-    const loginWithGoogle = () => {
-        signIn("google", { callbackUrl: "/" });
-    };
+    // const loginWithGoogle = () => {
+    //     signIn("google", { callbackUrl: "/" });
+    // };
 
     return (
         <>
@@ -52,9 +52,10 @@ const Login = () => {
             <meta name="keywords" content="connexion, compte, plateforme d'art en ligne, se connecter à Brekor, artistes amateurs" />
 
             <div className="login">
-                <img src="/assets/login.jpg" alt="login" className="login_decor" />
+                <h1>Créez votre compte</h1>
                 <div className="login_content">
                     <form className="login_content_form" onSubmit={handleSubmit}>
+                        <label>Email</label>
                         <input
                             placeholder="Email"
                             name="email"
@@ -63,6 +64,8 @@ const Login = () => {
                             onChange={(e) => setEmail(e.target.value)}
                             required
                         />
+
+                        <label>Mot de passe</label>
                         <input
                             placeholder="Password"
                             name="password"
@@ -74,11 +77,20 @@ const Login = () => {
                         {error && <p className="error">{error}</p>}
                         <button type="submit">Log In</button>
                     </form>
-                    <button className="google" onClick={loginWithGoogle}>
-                    <p>Log In with Google</p>
-                    <FcGoogle />
-                    </button>
-                    <a href="/register">Don't have an account? Sign In Here</a>
+                    <div className="d-flex flex-column">
+                        <div>
+                            <p>Ou continuez avec</p>
+                        </div>
+                        <div className="d-flex">
+                            <button className="google">
+                                <FcGoogle />
+                            </button>
+                            <button className="google">
+                                <FcGoogle />
+                            </button>
+                        </div>
+                    </div>
+                    <a href="/register">Vous n'avez pas de compte ? S'incrire</a>
                 </div>
             </div>
         </>

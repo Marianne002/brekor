@@ -6,7 +6,7 @@ import React from 'react';
 const Footer = () => {
 
     return (
-        <footer id="footer" className="container gradient-border-footer">
+        <footer id="footer" className="gradient-border-footer">
             <div className="row">
                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-5 mb-3">
                     <a className="navbar-brand"id="footer-heading" href="/">
