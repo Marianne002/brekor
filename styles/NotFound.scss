@@ -1,0 +1,17 @@
+
+.not-found{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white !important;
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+}
