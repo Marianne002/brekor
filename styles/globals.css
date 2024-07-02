@@ -64,6 +64,11 @@ footer h5 {
 }
 
 
+/* BTN */
+.btn-pink {
+  background-color: #FF1493 !important;
+}
+
 /* GRADIENT EFFECT */
 /* BUTTONS GRADIENT*/
 .div-btn-gradient {
@@ -87,6 +92,7 @@ footer h5 {
 
 /* BORDER GRADIENT */
 .gradient-border, 
+.gradient-border-all, 
 .gradient-border-home, 
 .gradient-border-footer {
   position: relative;
@@ -95,6 +101,7 @@ footer h5 {
   z-index: 1;
 }
 .gradient-border::before, 
+.gradient-border-all::before, 
 .gradient-border-home::before, 
 .gradient-border-footer::before {
   content: "";
@@ -116,6 +123,10 @@ footer h5 {
 .gradient-border-footer, 
 .gradient-border-footer::before {
   border-radius: 15px 15px 0 0;
+}
+.gradient-border-all, 
+.gradient-border-all::before {
+  border-radius: 15px;
 }
 
 

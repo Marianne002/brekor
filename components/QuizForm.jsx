@@ -76,29 +76,31 @@ const QuizForm = () => {
     }
   };
 
-  const handleNext = (e) => {
+  const handleNext = (e, step = 1) => {
     e.preventDefault();
     if (currentStep === 0) {
       setCurrentStep(1);
     } else if (!answers[questions[currentStep - 1].key]) {
       alert('Veuillez répondre à la question avant de continuer.');
     } else if (currentStep < questions.length) {
-      setCurrentStep(currentStep + 1);
+      setCurrentStep(currentStep + step);
     } else {
       setSubmitted(true);
     }
   };
 
+  const handlePrev = (e) => {
+    e.preventDefault();
+    if (currentStep > 1) {
+      setCurrentStep(currentStep - 1);
+    }
+  };
+
   return (
-    <form>
+    <form className="pt-4">
       {!submitted ? (
         currentStep === 0 ? (
-          <div className="quiz-card mb-4">
-            <div className="quiz-card-body d-flex flex-column">
-              <h2>A vous de jouez !</h2>
-              <button className="btn-gradient mt-3" onClick={handleNext}>Commencer le Quiz</button>
-            </div>
-          </div>
+          <button className="btn btn-pink m-4" onClick={handleNext}>Commencer le Quiz</button>
         ) : (
           <QuizCard
             question={questions[currentStep - 1].question}
@@ -106,6 +108,8 @@ const QuizForm = () => {
             currentAnswer={answers[questions[currentStep - 1].key]}
             handleChange={handleChange}
             handleNext={handleNext}
+            handlePrev={handlePrev}
+            currentStep={currentStep}
           />
         )
       ) : (
