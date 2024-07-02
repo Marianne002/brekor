@@ -18,6 +18,7 @@ const Footer = () => {
                             className="d-none d-xs-none d-sm-none d-md-block d-lg-block" 
                             src="/assets/logo-brekor.svg" 
                             alt="Logo Brekor"
+                            height={30}
                         />
                     </a>
                     {/* Form Newsletter */}

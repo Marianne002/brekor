@@ -15,7 +15,8 @@ const Navbar = () => {
 
     // State to manage dropdown menu
     const [dropdownMenu, setDropdownMenu] = useState(false);
-    const [userId, setUserId] = useState(null); // State to store userId
+    const [userId, setUserId] = useState(null);
+    const [isScrolled, setIsScrolled] = useState(false);
 
     // Get the router object
     const router = useRouter();
@@ -35,17 +36,39 @@ const Navbar = () => {
     // Get cart from user
     const cart = user?.cart;
 
+    // Effect to handle scroll event
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
 
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
     return (
         <nav 
-            className="navbar fixed-top" 
+            className={`navbar fixed-top ${isScrolled ? "scrolled" : ""}`} 
             aria-label="Menu de navigation"
         >
             <a href="/">
                 <img 
-                    src='/assets/logo-brekor.svg' 
-                    alt='Logo Brekor'
+                    className="d-xs-block d-sm-block d-md-none d-lg-none" 
+                    src="/assets/logo-brekor-small.svg" 
+                    alt="Petit logo Brekor"
+                />
+                <img 
+                    className="d-none d-xs-none d-sm-none d-md-block d-lg-block" 
+                    src="/assets/logo-brekor.svg" 
+                    alt="Logo Brekor"
+                    height={30}
                 />
             </a>
 

@@ -34,3 +34,9 @@ p {
 .navbar-padding-protection{
   padding: 95px 0 0 !important;
 }
+
+@media (max-width: 992px) {
+  .navbar-padding-protection{
+    padding: 69px 0 0 !important;
+  } 
+}

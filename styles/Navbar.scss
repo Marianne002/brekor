@@ -3,19 +3,18 @@
 @import "./breakpoints.scss";
 
 .navbar {
-  padding: 15px 80px 30px !important;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
 
+.navbar.scrolled {
+  background-color: #181a1e;
+}
+
+.navbar {
+  padding: 15px 80px 30px !important;
   @include sm {
     padding: 10px;
-  }
-
-  img {
-    width: 100px;
-    cursor: pointer;
   }
 
   &_search {
