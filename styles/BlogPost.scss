@@ -1,0 +1,18 @@
+// styles/BlogPost.scss
+* {
+  color: #fff;
+}
+/* BACKGROUND */
+.bg-darker {
+background-image: url('/assets/background-blog.svg');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+.post-img {
+  border-radius: 25px;
+}
+.post-content h2 {
+  padding-top: 25px;
+}

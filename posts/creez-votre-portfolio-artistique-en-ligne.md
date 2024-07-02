@@ -1,7 +1,9 @@
 ---
-title: "Créez Votre Portfolio Artistique en Ligne"
+title: "Créez votre portfolio artistique en ligne"
 description: "Guide pour créer un portfolio artistique en ligne professionnel et attirer des acheteurs potentiels."
 keywords: "portfolio, seo, visibilité"
+blogImage: "/assets/article4-small.webp"
+postImage: "/assets/article4.webp"
 order: 4
 ---
 

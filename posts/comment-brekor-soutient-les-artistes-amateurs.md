@@ -1,7 +1,9 @@
 ---
-title: "Comment Brekor Soutient les Artistes Amateurs"
+title: "Comment Brekor soutient les artistes amateurs ?"
 description: "Découvrez comment Brekor soutient les artistes amateurs avec des ressources et une communauté active."
 keywords: "soutient, communauté, ressources, mentorat"
+blogImage: "/assets/article7-small.webp"
+postImage: "/assets/article7.webp"
 order: 7
 ---
 

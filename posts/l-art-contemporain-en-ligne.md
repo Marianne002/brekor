@@ -1,7 +1,9 @@
 ---
-title: "L'Art Contemporain en Ligne - Guide Complet"
+title: "L'Art Contemporain en ligne - Guide complet"
 description: "Tout ce que vous devez savoir sur l'art contemporain en ligne et comment le vendre efficacement."
-keywords: " "
+keywords: "art contemporain"
+blogImage: "/assets/article5-small.webp"
+postImage: "/assets/article5.webp"
 order: 5
 ---
 

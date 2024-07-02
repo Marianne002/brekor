@@ -1,7 +1,7 @@
 // components/Navbar.jsx
 "use client";
 import "@styles/Navbar.scss";
-import { Menu, Person, Search, ShoppingCart } from '@mui/icons-material';
+import { Person, Search, ShoppingCart } from '@mui/icons-material';
 import { IconButton } from '@mui/material';
 import { signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
@@ -35,9 +35,11 @@ const Navbar = () => {
     // Get cart from user
     const cart = user?.cart;
 
+
+
     return (
-        <div 
-            className="navbar" 
+        <nav 
+            className="navbar fixed-top" 
             aria-label="Menu de navigation"
         >
             <a href="/">
@@ -62,7 +64,6 @@ const Navbar = () => {
                     </a>
                 )}
                 <button className='navbar_right_account' onClick={() => setDropdownMenu(!dropdownMenu)}>
-                    <Menu sx={{ color: "gray" }} />
                     {!user ? (
                         <Person sx={{ color: "gray" }} />
                     ) : (
@@ -88,7 +89,7 @@ const Navbar = () => {
                     </div>
                 )}
             </div>
-        </div>
+        </nav>
     );
 }
 

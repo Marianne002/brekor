@@ -11,6 +11,7 @@ const CGU = () => {
         <meta name="keywords" content="cgu, conditions générales d'utilisation" />
 
         <Navbar />
+        <div className="navbar-padding-protection"></div>
         {/* Section Conditions generales d'utilisation */}
         <section className="container" aria-label="Conditions générales d'utilisation">
             <h1>Conditions générales d'utilisation</h1>

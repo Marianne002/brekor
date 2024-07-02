@@ -2,6 +2,8 @@
 title: "Location d'Art pour Entreprises - Avantages et Conseils"
 description: "Découvrez les avantages de la location d'art pour entreprises et comment Brekor facilite ce processus."
 keywords: "location d'art, entreprises, avantages, conseils"
+blogImage: "/assets/article6-small.webp"
+postImage: "/assets/article6.webp"
 order: 6
 ---
 

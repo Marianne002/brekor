@@ -88,6 +88,7 @@ const CreateWork = () => {
             <meta name="keywords" content="poster oeuvre, vendre art, artistes amateurs, plateforme d'art en ligne" />
             
             <Navbar />
+            <div className="navbar-padding-protection"></div>
             <Form 
                 type="Create"
                 work={work}

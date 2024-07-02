@@ -74,6 +74,7 @@ const Wishlist = () => {
       <meta name="keywords" content="liste de souhait" />
 
       <Navbar />
+      <div className="navbar-padding-protection"></div>
       <h1 className="title-list">Your Wishlist</h1>
       {wishlist.length > 0 ? (
         <WorkList data={wishlist} userId={userId} updateWishlist={updateWishlistLocally} />

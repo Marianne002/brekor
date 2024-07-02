@@ -14,12 +14,23 @@ h1, h2, h3, a button {
 a {
   text-decoration: none !important;
 }
+ul {
+  list-style: none;
+}
+p {
+  margin: 0;
+  
+}
 
 /* BACKGROUND */
-.bg-darker {
+/* .bg-darker {
   background-image: url('/assets/background-blog.svg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
+} */
 
+
+.navbar-padding-protection{
+  padding: 95px 0 0 !important;
+}

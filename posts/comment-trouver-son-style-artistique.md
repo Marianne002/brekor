@@ -1,7 +1,9 @@
 ---
-title: "Comment Trouver Son Style Artistique"
+title: "Comment trouver son style artistique ?"
 description: "Découvrez comment trouver votre style artistique unique avec notre guide pratique et inspirant."
 keywords: "style artistique, guide pratique"
+blogImage: "/assets/article9-small.webp"
+postImage: "/assets/article9.webp"
 order: 9
 ---
 

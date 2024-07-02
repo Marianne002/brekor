@@ -42,7 +42,7 @@ const QuizForm = () => {
     <form ref={formRef} onSubmit={handleSubmit}>
       <h2>Questions du Quiz</h2>
       {/* Question 1 */}
-      <div className="d-flex flex-column">
+      <div className="d-flex flex-column mb-5 mb-5">
         <p>Quel type de sujets préférez-vous dans une œuvre d'art ?</p>
         <label>
           <input
@@ -97,7 +97,7 @@ const QuizForm = () => {
       </div>
 
       {/* Question 2 */}
-      <div className="d-flex flex-column">
+      <div className="d-flex flex-column mb-5">
         <p>Quelle palette de couleurs attire le plus votre attention ?</p>
         <label>
           <input
@@ -152,7 +152,7 @@ const QuizForm = () => {
       </div>
 
       {/* Question 3 */}
-      <div className="d-flex flex-column">
+      <div className="d-flex flex-column mb-5">
         <p>Comment décririez-vous votre approche de l'art ?</p>
         <label>
           <input
@@ -207,7 +207,7 @@ const QuizForm = () => {
       </div>
 
       {/* Question 4 */}
-      <div className="d-flex flex-column">
+      <div className="d-flex flex-column mb-5">
         <p>Quel est votre artiste préféré parmi ces choix ?</p>
         <label>
           <input
@@ -262,7 +262,7 @@ const QuizForm = () => {
       </div>
 
       {/* Question 5 */}
-      <div className="d-flex flex-column">
+      <div className="d-flex flex-column mb-5">
         <p>Quelle est votre réaction face à une œuvre d'art moderne et incomprise ?</p>
         <label>
           <input

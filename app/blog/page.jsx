@@ -1,8 +1,8 @@
 // app/blog/page.jsx
+import "@styles/Blog.scss";
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import Link from 'next/link';
 import Footer from '@components/Footer';
 import Navbar from '@components/Navbar';
 
@@ -40,18 +40,27 @@ const Blog = async () => {
       <meta name="keywords" content="blog, articles" />
 
       <Navbar />
-      <div className='container'>
+      <div className="navbar-padding-protection"></div>
+      <section className="container gradient-border">
         <h1>Blog</h1>
-        <ul>
+        <ul className='row d-flex justify-content-center gap-4'>
           {posts.map((post) => (
-            <li key={post.slug}>
-              <Link href={`/blog/${post.slug}`}>
-                {post.title}
-              </Link>
+            <li key={post.slug} className="col-4 blog-card p-0">
+              <a 
+                href={`/blog/${post.slug}`} 
+                className='d-flex flex-column justify-content-around'
+              >
+                <img 
+                  src={post.blogImage} 
+                  alt="Image de l'article" 
+                  className="img-fluid mx-auto" 
+                />
+                <p><strong>{post.title}</strong></p>
+              </a>
             </li>
           ))}
         </ul>
-      </div>
+      </section>
       <Footer />
     </>
   );

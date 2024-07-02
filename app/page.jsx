@@ -17,6 +17,7 @@ const Home = () => {
       <meta name="keywords" content="artiste amateur en ligne" />
 
       <Navbar />
+      <div className="navbar-padding-protection"></div>
       <Feed userId={session?.user?.id} />
       <Footer />
     </>

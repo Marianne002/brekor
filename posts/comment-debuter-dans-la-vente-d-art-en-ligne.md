@@ -1,7 +1,9 @@
 ---
-title: "Comment Débuter dans la Vente d'Art en Ligne"
+title: "Comment débuter dans la vente d'art en ligne ?"
 description: "Guide complet pour débuter dans la vente d'art en ligne et atteindre une audience mondiale avec Brekor."
 keywords: "vente d'art en ligne, guide, Brekor"
+blogImage: "/assets/article2-small.webp"
+postImage: "/assets/article2.webp"
 order: 2
 ---
 

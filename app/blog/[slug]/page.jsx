@@ -1,4 +1,5 @@
 // app/blog/[slug]/page.jsx
+import "@styles/BlogPost.scss";
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -7,7 +8,6 @@ import html from 'remark-html';
 import Footer from '@components/Footer';
 import Navbar from '@components/Navbar';
 import QuizForm from '../../../components/QuizForm';
-import QuizResult from '../../../components/QuizResult';
 
 async function getPost(slug) {
   // Get the content of the post
@@ -25,6 +25,7 @@ async function getPost(slug) {
   return {
     ...data,
     content: contentHtml,
+    slug,
   };
 }
 
@@ -38,21 +39,31 @@ const BlogPost = async ({ params }) => {
       <meta name="keywords" content={post.keywords} />
 
       <Navbar />
-      <section className="container">
+      <div className="navbar-padding-protection"></div>
+      <section className="container gradient-border d-flex flex-column align-items-center">
         <h1>{post.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        {post.postImage && 
+          <img 
+            src={post.postImage} 
+            alt={`Image de ${post.title}`} 
+            className="post-img img-fluid mx-auto m-4"
+          />
+        }
+        <div className="post-content" dangerouslySetInnerHTML={{ __html: post.content }} />
 
         {params.slug === 'quiz-trouvez-votre-mouvement-artistique' && <QuizForm />}
       </section>
-      <Footer/>
+      <Footer />
     </>
   );
 };
 
 export async function generateStaticParams() {
+  // Get all post slugs
   const postsDirectory = path.join(process.cwd(), 'posts');
   const filenames = fs.readdirSync(postsDirectory);
 
+  // Return the post slugs
   return filenames.map((filename) => ({
     slug: filename.replace(/\.md$/, ''),
   }));

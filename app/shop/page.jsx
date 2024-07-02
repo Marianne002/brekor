@@ -71,6 +71,7 @@ const ShopContent = () => {
             <meta name="keywords" content="acheter art, boutique d'art en ligne, Brekor, œuvres d'art uniques" />
 
             <Navbar />
+            <div className="navbar-padding-protection"></div>
             {profileId && (
                 <h1 className="title-list">
                     {userId === profileId ? "Your Works" : `${user.username}'s Works`}

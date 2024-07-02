@@ -11,6 +11,7 @@ const MentionsLegales = () => {
         <meta name="keywords" content="mentions légales" />
 
         <Navbar />
+        <div className="navbar-padding-protection"></div>
         {/* Section Mentions Legales--> */}
         <section className="container">
             <h1 className="featurette-heading">Mentions légales</h1>

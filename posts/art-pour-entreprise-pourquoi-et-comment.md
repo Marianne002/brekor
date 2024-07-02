@@ -2,6 +2,8 @@
 title: "Art pour Entreprise - Pourquoi et Comment"
 description: "Découvrez pourquoi l'art pour entreprise est important et comment l'intégrer efficacement dans vos bureaux."
 keywords: "art pour entreprise, bureaux"
+blogImage: "/assets/article10-small.webp"
+postImage: "/assets/article10.webp"
 order: 10
 ---
 

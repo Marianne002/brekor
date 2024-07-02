@@ -2,9 +2,9 @@
 "use client";
 import "@styles/Categories.scss";
 import { categories } from "@data";
+import Loader from "@components/Loader";
 import WorkList from "@components/WorkList";
 import { useEffect, useState } from "react";
-import Loader from "@components/Loader";
 
 const Feed = ({ userId }) => {
   // State to manage loading state

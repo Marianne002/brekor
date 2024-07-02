@@ -17,7 +17,9 @@ const layout = ({ children }) => {
       </head>
       <body>
         <Provider>
-          <main>{children}</main>
+          <main className="bg-darker">
+            {children}
+          </main>
         </Provider>
       </body>
     </html>

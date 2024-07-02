@@ -11,6 +11,7 @@ const PolitiqueConfidentialite = () => {
         <meta name="keywords" content="politique de confidentialité" />
 
         <Navbar />
+        <div className="navbar-padding-protection"></div>
         {/* Section Politique de confidentialité */}
         <section className="container">
             <h1 className="featurette-heading">Politique de confidentialité</h1>

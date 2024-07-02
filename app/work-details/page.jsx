@@ -124,6 +124,7 @@ const WorkDetailsContent = () => {
             <meta name="keywords" content="art" />
 
             <Navbar />
+            <div className="navbar-padding-protection"></div>
             <div className="work-details">
                 <div className="title">
                     <h1>{work.title}</h1>

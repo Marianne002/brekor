@@ -1,7 +1,9 @@
 ---
-title: "Tendances de l'Art 2024 - Ce Qui Vous Attend"
+title: "Tendances de l'Art 2024 - Ce qui vous attend"
 description: "Découvrez les tendances artistiques les plus prometteuses pour l'année 2024."
 keywords: "art 2024, tendances artistiques, innovation artistique"
+blogImage: "/assets/article1-small.webp"
+postImage: "/assets/article1.webp"
 order: 1
 ---
 

@@ -121,6 +121,7 @@ const UpdateWorkContent = () => {
             <meta name="keywords" content="modifier œuvre d'art, mise à jour œuvre, éditer catégorie œuvre, modifier titre, actualiser description œuvre, modifier prix art, télécharger photos art" />
             
             <Navbar />
+            <div className="navbar-padding-protection"></div>
             <Form
                 type="Edit"
                 work={work}
