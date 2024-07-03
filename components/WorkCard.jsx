@@ -161,7 +161,7 @@ const WorkCard = ({ work, userId, updateWishlist, onDeleteWork }) => {
         <div className="price">${work.price}</div>
       </div>
 
-      {userId === work.creator._id ? (
+      {work.creator && userId === work.creator._id ? (
         <div
           className="icon"
           onClick={(e) => {
