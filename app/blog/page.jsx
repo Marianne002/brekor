@@ -45,7 +45,7 @@ const Blog = async () => {
       <div className="container p-0">
         <section className="gradient-border">
           <h1 className="d-none">Blog</h1>
-          <ul className='row d-flex justify-content-center gap-4'>
+          <ul className='row d-flex justify-content-center gap-4 p-0'>
             {posts.map((post) => (
               <li key={post.slug} className="col-4 blog-card p-0">
                 <a 
