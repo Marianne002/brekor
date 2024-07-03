@@ -52,12 +52,11 @@ const Login = () => {
             <meta name="keywords" content="connexion, compte, plateforme d'art en ligne, se connecter à Brekor, artistes amateurs" />
 
             <div className="login">
-                <h1>Créez votre compte</h1>
                 <div className="login_content">
+                <h1 className="gradient-color">Connectez vous</h1>
                     <form className="login_content_form" onSubmit={handleSubmit}>
-                        <label>Email</label>
+                        <label>Adresse mail</label>
                         <input
-                            placeholder="Email"
                             name="email"
                             type="email"
                             value={email}
@@ -67,7 +66,6 @@ const Login = () => {
 
                         <label>Mot de passe</label>
                         <input
-                            placeholder="Password"
                             name="password"
                             type="password"
                             value={password}
@@ -75,18 +73,19 @@ const Login = () => {
                             required
                         />
                         {error && <p className="error">{error}</p>}
-                        <button type="submit">Log In</button>
+                        <button className="btn" type="submit">Se connecter</button>
                     </form>
                     <div className="d-flex flex-column">
                         <div>
                             <p>Ou continuez avec</p>
                         </div>
-                        <div className="d-flex">
-                            <button className="google">
-                                <FcGoogle />
+                        <div className="d-flex align-items-center justify-content-between column-gap-3
+                        ">
+                            <button className="rs">
+                                <img src="/assets/icon-google.svg" alt="Icon Google" />
                             </button>
-                            <button className="google">
-                                <FcGoogle />
+                            <button className="rs">
+                                <img src="/assets/icon-facebook.svg" alt="Icon Facebook" />
                             </button>
                         </div>
                     </div>

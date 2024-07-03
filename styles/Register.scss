@@ -1,7 +1,4 @@
 // styles/Register.scss
-@import "./variables.module.scss";
-@import "./breakpoints.scss";
-
 .register {
   width: 100vw;
   height: 100vh;
@@ -10,7 +7,12 @@
   align-items: center;
   background-color: #222222;
 
-  h1, label {
+  h1 {
+    font-size: 48px;
+    font-weight: 700;
+  }
+
+  label {
     color: white;
   }
 
@@ -19,55 +21,74 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 35%;
     gap: 15px;
-    height: 550px;
-
-    @include lg {
-      width: 45%;
-    }
-
-    @include ml {
-      width: 50%;
-    }
-
-    @include md {
-      width: 70%;
-      border-radius: 30px;
-    }
+    min-height: 550px;
 
     &_form {
       display: flex;
       flex-direction: column;
       gap: 15px;
-      width: 70%;
+      width: 100%;
 
-      input {
+      input, textarea {
         width: 100%;
-        padding: 7px 15px;
-
+        padding: 6px 12px;
+        border-radius: 8px;
+        outline: none;
+        border: none;
       }
 
-      label {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 9px;
-        cursor: pointer;
-        font-size: 14px;
+      button,
+      button:hover {
+        border-radius: 8px;
+        background-color: white !important;
       }
+    }
 
-      button {
-        margin-top: 15px;
-
-        @include buttonStyle;
-        width: 250px;
+    &_checkbox {
+      margin: 0 16px 0 0 !important;
+    
+      input{
+        appearance: none;
+        width: 24px !important;
+        height: 24px;
+        padding: 0;
+        background: transparent !important;
+        border: 2px solid white !important;
+        border-radius: 4px !important;
       }
     }
 
     &_error {
-      color: red;
+      color: red !important;
       margin: 0 0 0 10px;
     }
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+    margin: 15px 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  p {
+    color: white;
+    font-size: 13px;
+    text-align: center;
+  }
+  .rs {
+    width: 104px;
+    height: 48px;
+    border: 2px solid white;
+    border-radius: 8px;
+    background: transparent;
+    
   }
 }

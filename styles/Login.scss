@@ -1,97 +1,80 @@
 // styles/Login.scss
-@import "./variables.module.scss";
-@import "./breakpoints.scss";
-
 .login {
   width: 100vw;
   height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #222222;
+
+  h1 {
+    font-size: 48px;
+    font-weight: 700;
+  }
+
+  label {
+    color: white;
+  }
 
   &_content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 35%;
     gap: 15px;
-    height: 450px;
-
-    @include lg {
-      width: 45%;
-    }
-
-    @include ml {
-      width: 50%;
-    }
-
-    @include md {
-      width: 70%;
-      border-radius: 30px;
-    }
+    min-height: 550px;
 
     &_form {
       display: flex;
       flex-direction: column;
       gap: 15px;
+      width: 100%;
 
       input {
         width: 100%;
-        padding: 7px 15px;
-        background-color: transparent;
-        border: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 6px 12px;
+        border-radius: 8px;
         outline: none;
-        color: white;
-
-        input:not(:placeholder-shown):focus {
-          background: transparent; /* or background: none; */
-        }
-
-        &::placeholder {
-          color: white;
-        }
+        border: none;
       }
 
-      .error {
-        color: $pinkred;
-      }
-
-      button {
-        margin-top: 15px;
-        width: 250px;
-  
-        @include buttonStyle;
+      button,
+      button:hover {
+        border-radius: 8px;
+        background-color: white !important;
       }
     }
 
-    .google {
-      margin-top: 5px;
-      width: 250px;
-
-      @include GoogleButton;
+    &_error {
+      color: red !important;
+      margin: 0 0 0 10px;
     }
+  }
 
-    a {
-      text-decoration: none;
-      color: white;
-      font-size: 17px;
-      font-weight: 600;
-      text-align: center;
-      margin: 15px 0;
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+    margin: 15px 0;
 
-      &:hover {
-        text-decoration: underline;
-      }
+    &:hover {
+      text-decoration: underline;
     }
+  }
 
-    p {
-      color: white;
-      font-size: 13px;
-      text-align: center;
-    }
+  p {
+    color: white;
+    font-size: 13px;
+    text-align: center;
+  }
+  .rs {
+    width: 104px;
+    height: 48px;
+    border: 2px solid white;
+    border-radius: 8px;
+    background: transparent;
+    
   }
 }

@@ -72,13 +72,6 @@ const Navbar = () => {
                 />
             </a>
 
-            <div className='navbar_search'>
-                <input type='text' placeholder='Search...'/>
-                <IconButton>
-                    <Search sx={{ color: "red" }} />
-                </IconButton>
-            </div>
-
             <div className='navbar_right'>
                 {user && (
                     <a href="/cart" className="cart">

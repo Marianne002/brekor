@@ -28,11 +28,11 @@ const Register = () => {
   // Move to Step 2
   const moveToStep2 = () => {
     if (!formDataStep1.email || !formDataStep1.password || !formDataStep1.confirmPassword) {
-      setError("Please fill in all fields");
+      setError("Merci de remplir tous les champs.");
       return;
     }
     if (formDataStep1.password !== formDataStep1.confirmPassword) {
-      setError("Passwords do not match");
+      setError("Les mots de passe ne correspondent pas.");
       return;
     }
     setStep(2);
@@ -109,84 +109,99 @@ const Register = () => {
         <div className="register_content">
           {step === 1 && (
             <>
-              <h1>Créez votre compte</h1>
+              <h1 className="gradient-color">Créez votre compte</h1>
               <form className="register_content_form" onSubmit={handleSubmitStep1}>
+                <label htmlFor="email">Adresse mail</label>
                 <input
-                  placeholder="Email"
                   type="email"
                   name="email"
                   value={formDataStep1.email}
                   onChange={handleChangeStep1}
                   required
                 />
+                <label htmlFor="password">Mot de passe</label>
                 <input
-                  placeholder="Password"
                   type="password"
                   name="password"
                   value={formDataStep1.password}
                   onChange={handleChangeStep1}
                   required
                 />
+                <label htmlFor="confirmPassword">Confirmez votre mot de passe</label>
                 <input
-                  placeholder="Confirm Password"
                   type="password"
                   name="confirmPassword"
                   value={formDataStep1.confirmPassword}
                   onChange={handleChangeStep1}
                   required
                 />
-                <input
-                  type="checkbox"
-                  name="rememberMe"
-                  checked={formDataStep1.rememberMe}
-                  onChange={handleChangeStep1}
-                />
-                <label htmlFor="rememberMe">Remember me</label>
-                <button type="button" onClick={moveToStep2}>
-                  Next
+                <div className="d-flex">
+                  <div
+                    className="register_content_checkbox"
+                  >
+                    <input type="checkbox" name="checkbox" />
+                  </div>
+                  <label htmlFor="rememberMe">Se souvenir de moi</label>
+                </div>
+                <button className="btn" type="button" onClick={moveToStep2}>
+                  Suivant
                 </button>
-                {error && <p className="error">{error}</p>}
+                {error && <p className="register_content_error">{error}</p>}
               </form>
+              <div className="d-flex flex-column">
+                <div>
+                  <p>Ou continuez avec</p>
+                </div>
+                <div className="d-flex align-items-center justify-content-between column-gap-3">
+                  <button className="rs">
+                    <img src="/assets/icon-google.svg" alt="Icon Google" />
+                  </button>
+                  <button className="rs">
+                    <img src="/assets/icon-facebook.svg" alt="Icon Facebook" />
+                  </button>
+                </div>
+              </div>
+              <a href="/login">Vous avez déjà un compte ? Se connecter</a>
             </>
           )}
 
           {step === 2 && (
             <>
-              <h1>Profil</h1>
+              <h1 className="gradient-color">Profil</h1>
               <form className="register_content_form" onSubmit={handleSubmitStep2}>
-              <input
-                id="image"
-                type="file"
-                name="profileImage"
-                onChange={handleChangeStep2}
-                accept="image/*"
-                required
-              />
-              {formDataStep2.profileImage && (
-                <img
-                  src={URL.createObjectURL(formDataStep2.profileImage)}
-                  alt="Profile"
-                  style={{ maxWidth: "80px", maxHeight: "100px" }}
+                <input
+                  id="image"
+                  type="file"
+                  name="profileImage"
+                  onChange={handleChangeStep2}
+                  accept="image/*"
+                  required
                 />
-              )}
-              <input
-                placeholder="Username"
-                name="username"
-                value={formDataStep2.username}
-                onChange={handleChangeStep2}
-                required
-              />
-              <input
-                placeholder="Description"
-                name="description"
-                value={formDataStep2.description}
-                onChange={handleChangeStep2}
-                required
-              />
-              
-              <button type="submit">Register</button>
-              {error && <p className="error">{error}</p>}
-            </form>
+                {formDataStep2.profileImage && (
+                  <img
+                    src={URL.createObjectURL(formDataStep2.profileImage)}
+                    alt="Profile"
+                    style={{ maxWidth: "80px", maxHeight: "100px" }}
+                  />
+                )}
+                <label htmlFor="username">Pseudo</label>
+                <input
+                  name="username"
+                  value={formDataStep2.username}
+                  onChange={handleChangeStep2}
+                  required
+                />
+                <label htmlFor="description">Description</label>
+                <textarea
+                  name="description"
+                  value={formDataStep2.description}
+                  onChange={handleChangeStep2}
+                  required
+                ></textarea>
+                
+                <button className="btn" type="submit">Finaliser</button>
+                {error && <p className="error">{error}</p>}
+              </form>
             </>
           )}
         </div>
