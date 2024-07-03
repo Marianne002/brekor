@@ -11,7 +11,6 @@ import {
     Edit,
     FavoriteBorder,
     ArrowBackIosNew,
-    ShoppingCart,
 } from "@mui/icons-material";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
@@ -185,14 +184,20 @@ const WorkDetailsContent = () => {
                     {visiblePhotos < work.workPhotoPaths.length && (
                         <div className="show-more" onClick={loadMorePhotos}>
                             <ArrowForwardIos sx={{ fontSize: "40px" }} />
-                            Show More
+                            Plus
                         </div>
                     )}
                 </div>
 
-                <div>
-                    <button className="btn btn-gradient">Acheter</button>
-                    <button className="btn">Louer</button>
+                <div className="btn-actions">
+                    <div>
+                        <button className="btn-gradient">
+                            <b>Acheter</b>
+                        </button>
+                        <button className="btn-louer">
+                            <b>Louer</b>
+                        </button>
+                    </div>
                 </div>
 
                 <div className="profile mt-5">
@@ -209,7 +214,7 @@ const WorkDetailsContent = () => {
                     <button 
                         className="btn btn-pink"
                         onClick={() => router.push(`/shop?id=${work.creator._id}`)}>
-                            <ArrowForwardIos sx={{ fontSize: "15px" }} />
+                            <ArrowForwardIos sx={{ fontSize: "20px", color: "white"  }} />
                     </button>
                 </div>
 

@@ -6,10 +6,24 @@
     padding: 0;
   }
 
+  .btn-actions, 
+  .btn-actions div, 
+  .btn-actions button,
+  .info > div,
+  .profile,
+  .profile button,
+  .show-more,
+  .slide,
+  .prev-button,
+  .next-button,
   .title {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+  }
+
+  .title {
+    justify-content: space-between;
 
     .save {
       display: flex;
@@ -25,7 +39,6 @@
     }
   }
   .slider-container {
-    // max-width: 800px;
     overflow: hidden;
     border-radius: 10px;
     margin: 40px 0;
@@ -47,9 +60,6 @@
         flex: 0 0 100%;
         width: auto;
         height: 270px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
 
         img {
           width: auto;
@@ -66,9 +76,6 @@
           border-radius: 50%;
           border: none;
           cursor: pointer;
-          display: flex;
-          align-items: center;
-          justify-content: center;
           background-color: rgba(255, 255, 255, 0.7);
           z-index: 99;
 
@@ -76,14 +83,6 @@
             background-color: white;
           }
         }
-
-        // .prev-button {
-        //   left: 10px;
-        // }
-
-        // .next-button {
-        //   right: 10px;
-        // }
       }
     }
   }
@@ -106,19 +105,34 @@
     }
 
     .show-more {
-      display: flex;
       flex-direction: column;
       gap: 20px;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
     }
   }
 
+  .btn-actions {
+    div {
+      justify-content: space-between;
+      gap: 20px;
+
+      button {
+        min-width: 168px;
+        max-width: 168px;
+        height: 38px;
+        border-radius: 6px;
+      }
+      .btn-gradient {
+        color: white;
+      }
+      .btn-louer {
+        background: transparent;
+        border: 1px solid #4C4C4C;
+        color: #4C4C4C;
+      }
+    }
+  }
 
   .profile {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
     height: 60px;
 
@@ -128,10 +142,18 @@
       border-radius: 50%;
       margin: 0;
     }
+    p {
+      color: #FF1493;
+    }
+
+    button {
+      width: 32px;
+      height: 32px;
+      border-radius: 100%;
+    }
   }
 
   .info > div {
-    display: flex;
     justify-content: space-between;
   }
 
