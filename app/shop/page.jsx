@@ -74,7 +74,7 @@ const ShopContent = () => {
             <div className="navbar-padding-protection"></div>
             {profileId && (
                 <h1 className="title-list">
-                    {userId === profileId ? "Your Works" : `${user.username}'s Works`}
+                    {userId === profileId ? "Votre shop" : `${user.username}'s shop`}
                 </h1>
             )}
             <WorkList data={workList} userId={userId} onDeleteWork={handleWorkDelete} />

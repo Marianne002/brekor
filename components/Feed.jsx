@@ -44,7 +44,7 @@ const Feed = ({ userId }) => {
 
   return (
     <>
-      <div className="categories">
+      <div className="categories gradient-border-all">
         {categories.map((item, index) => (
           <p
             onClick={() => setSelectedCategory(item)}

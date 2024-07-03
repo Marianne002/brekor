@@ -3,7 +3,7 @@
 @import "./breakpoints.scss";
 
 .form {
-  h1, h3, h4, label, .alone {
+  h1, h3, h4, label, .alone, .category-list {
     color: white;
   }
 
@@ -15,11 +15,6 @@
     background-color: #222;
     padding: 30px 40px;
     border-radius: 20px;
-
-    @include sm {
-      padding: 30px 20px;
-    }
-
 
     .category-list {
       margin: 20px 0 40px;
@@ -150,6 +145,7 @@
         font-size: 16px;
         font-weight: 500;
         width: 600px;
+        margin-bottom: 20px;
 
         @include ml {
           width: 450px

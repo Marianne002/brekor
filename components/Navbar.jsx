@@ -75,7 +75,7 @@ const Navbar = () => {
                 {user && (
                     <a href="/cart" className="cart">
                         <ShoppingCart sx={{ color: "gray" }}/>
-                        Cart <span>({cart?.length})</span>
+                        Panier <span>({cart?.length})</span>
                     </a>
                 )}
                 <button className='navbar_right_account' onClick={() => setDropdownMenu(!dropdownMenu)}>
@@ -88,19 +88,19 @@ const Navbar = () => {
                 
                 {dropdownMenu && !user && (
                     <div className='navbar_right_accountmenu'>
-                        <Link href="/login">Log In</Link>
-                        <Link href="/register">Sign Up</Link>
+                        <Link href="/login">Se connecter</Link>
+                        <Link href="/register">S'inscrire</Link>
                     </div>
                 )}
 
                 {dropdownMenu && user && (
                     <div className='navbar_right_accountmenu'>
-                        <Link href={userId ? `/wishlist?id=${userId}` : "/wishlist"}>Wishlist</Link>
-                        <Link href="/cart">Cart</Link>
-                        <Link href="/order">Orders</Link>
-                        {userId && <Link href={`/shop?id=${userId}`}>Your Shop</Link>}
-                        <Link href="/create-work">Sell Your Work</Link>
-                        <a onClick={handleLogout}>Log Out</a>
+                        <Link href={userId ? `/wishlist?id=${userId}` : "/wishlist"}>Liste de souhait</Link>
+                        <Link href="/cart">Panier</Link>
+                        <Link href="/order">Commandes</Link>
+                        {userId && <Link href={`/shop?id=${userId}`}>Shop</Link>}
+                        <Link href="/create-work">Poster</Link>
+                        <a onClick={handleLogout}>Déconnexion</a>
                     </div>
                 )}
             </div>

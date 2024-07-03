@@ -63,10 +63,12 @@ const Wishlist = () => {
     setWishlist(updatedWishlist);
   };
 
-  console.log("Wishlist:", wishlist);
-  console.log("User ID:", userId);
-  console.log("creator work img", wishlist[0]?.creator?.profileImage);
-  console.log("creator work name", wishlist[0]?.creator?.name);
+  // Log the wishlist and user ID
+  // console.log("Wishlist:", wishlist);
+  // console.log("User ID:", userId);
+  // console.log("creator work img", wishlist[0]?.creator?.profileImage);
+  // console.log("creator work name", wishlist[0]?.creator?.name);
+
   return (
     <>
       <title>Liste de souhait - Brekor</title>
@@ -75,11 +77,14 @@ const Wishlist = () => {
 
       <Navbar />
       <div className="navbar-padding-protection"></div>
-      <h1 className="title-list">Your Wishlist</h1>
+      <h1 className="title-list">Votre liste de souhait</h1>
       {wishlist.length > 0 ? (
         <WorkList data={wishlist} userId={userId} updateWishlist={updateWishlistLocally} />
       ) : (
-        <p>Your wishlist is empty.</p>
+        <div className="container d-flex flex-column text-white">
+          <p>Votre liste de souhait est vide.</p>
+          <p>Ajoutez-y vos coups de cœur et retrouvez-les facilement pour vos prochains achats !</p>
+        </div>
       )}
       <Footer />
     </>

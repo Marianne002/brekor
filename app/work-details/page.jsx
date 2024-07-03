@@ -214,7 +214,7 @@ const WorkDetailsContent = () => {
                     <button 
                         className="btn btn-pink"
                         onClick={() => router.push(`/shop?id=${work.creator._id}`)}>
-                            <ArrowForwardIos sx={{ fontSize: "20px", color: "white"  }} />
+                            <ArrowForwardIos sx={{ fontSize: "20px", color: "white" }} />
                     </button>
                 </div>
 
@@ -242,7 +242,7 @@ const WorkDetailsContent = () => {
                         <p>France</p>
                     </div>
 
-                    <div className="mt-5">
+                    <div className="d-flex flex-column align-items-start mt-5">
                         <p><b>Description</b></p>
                         <p>{work.description}</p>
                     </div>
@@ -252,6 +252,7 @@ const WorkDetailsContent = () => {
                     <h5>
                         Recommendations
                     </h5>
+                    <p>Vous découvrirez bientôt des œuvres similaires et des suggestions personnalisées.</p>
                 </div>
             </div>
             <Footer />

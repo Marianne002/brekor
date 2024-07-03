@@ -63,7 +63,7 @@ const Form = ({ type, work, setWork, handleSubmit }) => {
     return (
         <div className="container form">
             <h1>{type} votre publication</h1>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="p-4">
                 <h3>Quelle catégorie décrit le mieux votre oeuvre ?</h3>
                 <div className="category-list">
                     {categories.map((item, index) => (
@@ -138,8 +138,10 @@ const Form = ({ type, work, setWork, handleSubmit }) => {
                         className="price"
                     />
                 </div>
-                <button className="btn-gradient mt-4" type="submit">
-                    Publier votre œuvre
+                <button className="btn-gradient mt-4 text-white" type="submit">
+                    <b>
+                        Publier votre œuvre
+                    </b>
                 </button>
             </form>
         </div>
