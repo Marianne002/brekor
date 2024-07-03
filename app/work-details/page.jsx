@@ -32,7 +32,7 @@ const WorkDetailsContent = () => {
     useEffect(() => {
         if (session?.user?.id) {
             setUserId(session.user.id);
-            console.log("Session user ID:", session.user.id);
+            // console.log("Session user ID:", session.user.id);
         } else {
             console.log("Session is not defined or user ID is missing:", session);
         }
@@ -106,10 +106,10 @@ const WorkDetailsContent = () => {
     const router = useRouter();
 
     // Log the details to the console
-    console.log("workId:", workId);
-    console.log("work.creator._id:", work?.creator?._id);
-    console.log("userId:", userId);
-    console.log("Session status:", status);
+    // console.log("workId:", workId);
+    // console.log("work.creator._id:", work?.creator?._id);
+    // console.log("userId:", userId);
+    // console.log("Session status:", status);
 
     // Show a loader while the page is loading
     if (loading) {
