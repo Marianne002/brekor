@@ -6,6 +6,8 @@
   cursor: pointer;
   padding: 10px;
   border-radius: 10px;
+  background-color: #25272D;
+  color: white;
 
   &:hover {
     @include shadow;
@@ -96,9 +98,6 @@
     }
 
     .price {
-      background: $lightblue;
-      padding: 10px;
-      border-radius: 10px;
       font-weight: 700;
       font-size: 17px;
     }

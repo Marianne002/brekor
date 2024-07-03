@@ -3,6 +3,7 @@
 @import "./breakpoints.scss";
 
 .work-details {
+  color: white;
   padding: 40px 80px 120px;
 
   @include xl {
@@ -142,15 +143,12 @@
     }
   }
 
-  hr {
-    margin: 20px 0;
-  }
 
   .profile {
     display: flex;
-    gap: 20px;
     align-items: center;
-    cursor: pointer;
+    justify-content: space-between;
+    height: 60px;
 
     img {
       width: 60px;
@@ -160,18 +158,12 @@
     }
   }
 
-  p {
-    max-width: 800px;
-    margin: 20px 0 40px;
+  .info > div {
+    display: flex;
+    justify-content: space-between;
   }
 
-  button {
-    margin-top: 50px;
-    
-    @include buttonStyle;
-    
-    &:hover {
-      box-shadow: 0 0 10px 3px rgb(98, 98, 98);
-    }
+  .info hr {
+    border: 2px solid black;
   }
 }

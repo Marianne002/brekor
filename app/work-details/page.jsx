@@ -190,24 +190,64 @@ const WorkDetailsContent = () => {
                     )}
                 </div>
 
-                <div className="profile">
-                    <img
-                        src={work.creator.profileImagePath}
-                        alt="profile"
-                        onClick={() => router.push(`/shop?id=${work.creator._id}`)}
-                    />
-                    <h3>Created by {work.creator.username}</h3>
+                <div>
+                    <button className="btn btn-gradient">Acheter</button>
+                    <button className="btn">Louer</button>
                 </div>
 
-                <hr />
-                <h3>About this product</h3>
-                <p>{work.description}</p>
+                <div className="profile mt-5">
+                    <div className="d-flex gap-3">
+                        <img
+                            src={work.creator.profileImagePath}
+                            alt="profile"
+                        />
+                        <div>
+                            <h5>{work.creator.username}</h5>
+                            <p>Peintre, paris (France)</p>
+                        </div>
+                    </div>
+                    <button 
+                        className="btn btn-pink"
+                        onClick={() => router.push(`/shop?id=${work.creator._id}`)}>
+                            <ArrowForwardIos sx={{ fontSize: "15px" }} />
+                    </button>
+                </div>
 
-                <h1>${work.price}</h1>
-                <button type="submit">
-                    <ShoppingCart />
-                    ADD TO CART
-                </button>
+                <div className="info mt-5">
+                    <div>
+                        <p>Date</p>
+                        <p>2020</p>
+                    </div>
+                    <hr />
+
+                    <div>
+                        <p>Technique</p>
+                        <p>Huile sur toile</p>
+                    </div>
+                    <hr />
+
+                    <div>
+                        <p>Dimensions</p>
+                        <p>120 cm x 90 cm</p>
+                    </div>
+                    <hr />
+
+                    <div>
+                        <p>Langue</p>
+                        <p>France</p>
+                    </div>
+
+                    <div className="mt-5">
+                        <p><b>Description</b></p>
+                        <p>{work.description}</p>
+                    </div>
+                </div>
+
+                <div className="recommendations mt-5">
+                    <h5>
+                        Recommendations
+                    </h5>
+                </div>
             </div>
             <Footer />
         </>

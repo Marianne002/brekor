@@ -148,17 +148,20 @@ const WorkCard = ({ work, userId, updateWishlist, onDeleteWork }) => {
 
       <div className="info">
         <div>
-          <h3>{work.title}</h3>
+          <h5>{work.title}</h5>
           {work.creator && (
             <div className="creator">
               {work.creator.profileImagePath && (
                 <img src={work.creator.profileImagePath} alt="creator" />
               )}
-              <span>{work.creator.username}</span> in <span>{work.category}</span>
+              <span>{work.creator.username}</span>
             </div>
           )}
         </div>
-        <div className="price">${work.price}</div>
+        <div>
+          <div className="price">{work.price}€</div>
+          <img src="/assets/icon-cart.svg" alt="Icon panier" />
+        </div>
       </div>
 
       {work.creator && userId === work.creator._id ? (
@@ -190,19 +193,19 @@ const WorkCard = ({ work, userId, updateWishlist, onDeleteWork }) => {
             <Favorite
               sx={{
                 borderRadius: "50%",
-                backgroundColor: "white",
                 color: "red",
                 padding: "5px",
-                fontSize: "30px",
+                fontSize: "40px",
+                width:"15px"
               }}
             />
           ) : (
-            <FavoriteBorder
+            <Favorite
               sx={{
                 borderRadius: "50%",
-                backgroundColor: "white",
+                color:"#A1A1A1",
                 padding: "5px",
-                fontSize: "30px",
+                fontSize: "40px",
               }}
             />
           )}
