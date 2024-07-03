@@ -8,6 +8,7 @@
   border-radius: 10px;
   background-color: #25272D;
   color: white;
+  max-width: inherit;
 
   &:hover {
     @include shadow;
@@ -36,6 +37,7 @@
           width: auto;
           max-width: -webkit-fill-available;
           height: 270px;
+          border-radius: 10px;
         }
 
         .prev-button,

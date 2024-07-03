@@ -46,6 +46,13 @@ const MentionsLegales = () => {
             </p>
             {/* End Responsable publication */}
 
+            {/* Conception et développement */}
+            <h2 className="pt-4">Conception et développement</h2>
+            <p>
+                Ce site a été conçu et développé par des étudiants à <strong>Digital Campus Paris</strong>.
+            </p>
+            {/* End Conception et développement */}
+
             {/* Hebergeur */}
             <h2 className="pt-4">Hébergeur</h2>
             <p>

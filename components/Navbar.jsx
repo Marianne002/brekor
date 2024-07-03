@@ -71,30 +71,29 @@ const Navbar = () => {
                 />
             </a>
 
-            <div className='navbar_right'>
+            <div className="navbar_right">
                 {user && (
-                    <a href="/cart" className="cart">
-                        <ShoppingCart sx={{ color: "gray" }}/>
-                        Panier <span>({cart?.length})</span>
+                    <a href="/cart">
+                        <img src="/assets/icon-cart.svg" alt="Icon cart" />
                     </a>
                 )}
-                <button className='navbar_right_account' onClick={() => setDropdownMenu(!dropdownMenu)}>
+                <button className="navbar_right_account" onClick={() => setDropdownMenu(!dropdownMenu)}>
                     {!user ? (
                         <Person sx={{ color: "gray" }} />
                     ) : (
-                        <img src={user.profileImagePath} alt='profile' style={{ objectFit: "cover", borderRadius: "50%" }} />
+                        <img src={user.profileImagePath} alt="profile" style={{ objectFit: "cover", borderRadius: "50%" }} />
                     )}
                 </button>
                 
                 {dropdownMenu && !user && (
-                    <div className='navbar_right_accountmenu'>
+                    <div className="gradient-border-all-rounder navbar_right_accountmenu">
                         <Link href="/login">Se connecter</Link>
                         <Link href="/register">S'inscrire</Link>
                     </div>
                 )}
 
                 {dropdownMenu && user && (
-                    <div className='navbar_right_accountmenu'>
+                    <div className="gradient-border-all-rounder navbar_right_accountmenu">
                         <Link href={userId ? `/wishlist?id=${userId}` : "/wishlist"}>Liste de souhait</Link>
                         <Link href="/cart">Panier</Link>
                         <Link href="/order">Commandes</Link>
