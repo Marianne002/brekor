@@ -27,6 +27,10 @@ const Register = () => {
 
   // Move to Step 2
   const moveToStep2 = () => {
+    if (!formDataStep1.email || !formDataStep1.password || !formDataStep1.confirmPassword) {
+      setError("Please fill in all fields");
+      return;
+    }
     if (formDataStep1.password !== formDataStep1.confirmPassword) {
       setError("Passwords do not match");
       return;
