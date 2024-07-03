@@ -47,7 +47,7 @@ const QuizResult = ({ answers }) => {
   };
 
   return (
-    <div className="gradient-border-all quiz-card mb-4">
+    <div className="gradient-border-all-rounder quiz-card mb-4">
       <div className="card-body">
         <h2>Résultat du Quiz</h2>
         <span>{getResultText()}</span>

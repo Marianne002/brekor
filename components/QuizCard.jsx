@@ -5,7 +5,7 @@ import React from 'react';
 
 const QuizCard = ({ question, options, currentAnswer, handleChange, handleNext, handlePrev, currentStep }) => {
   return (
-    <div className="gradient-border-all quiz-card mb-4 mx-auto">
+    <div className="gradient-border-all-rounder quiz-card mb-4 mx-auto">
       <div className="quiz-card-body">
         <label className="quiz-question">{question}</label>
         {options.map((option, index) => (

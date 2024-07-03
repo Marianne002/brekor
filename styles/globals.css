@@ -1,19 +1,22 @@
 /* GENERAL */
+
+
 *, *::after,*::before{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   /* scrollbar-width: none !important; */
 }
-body{
-  font-family: 'Poppins', sans-serif;
+body, p, span, a, button{
+  font-family: "Poppins", sans-serif !important;
 }
-h1, h2, h3, a button {
-  font-family: "hoss-round", sans-serif;
-}
-/* h1, h2, h3, h4, h5, p, span, ul, ol, li, a, a button {
+h1, h1 span, h2, h2 span, h3, h3 span, a button {
+  font-family: "hoss-round", sans-serif !important;
   color: white !important;
-} */
+}
+h1, h2, h3 {
+  font-weight: 700 !important;
+}
 a {
   text-decoration: none;
 }
@@ -57,7 +60,7 @@ footer h5 {
 
 /* NAVBAR */
 .navbar-padding-protection{
-  padding: 95px 0 0 !important;
+  padding: 80px 0 0 !important;
 }
 
 @media (max-width: 992px) {
@@ -76,6 +79,7 @@ footer h5 {
 /* BUTTONS GRADIENT*/
 .div-btn-gradient {
   padding: 16px 0 !important;
+  color: white !important;
 }
 .btn-gradient, .input-group .btn {
   padding: 13px 16px !important;
@@ -95,7 +99,8 @@ footer h5 {
 
 /* BORDER GRADIENT */
 .gradient-border, 
-.gradient-border-all, 
+.gradient-border-all,
+.gradient-border-all-rounder,
 .gradient-border-home, 
 .gradient-border-footer {
   position: relative;
@@ -104,7 +109,8 @@ footer h5 {
   z-index: 1;
 }
 .gradient-border::before, 
-.gradient-border-all::before, 
+.gradient-border-all::before,
+.gradient-border-all-rounder::before,
 .gradient-border-home::before, 
 .gradient-border-footer::before {
   content: "";
@@ -127,9 +133,13 @@ footer h5 {
 .gradient-border-footer::before {
   border-radius: 15px 15px 0 0;
 }
+.gradient-border-all-rounder, 
+.gradient-border-all-rounder::before {
+  border-radius: 15px;
+}
 .gradient-border-all, 
 .gradient-border-all::before {
-  border-radius: 15px;
+  border-radius: 0 !important;
 }
 
 

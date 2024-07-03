@@ -139,7 +139,7 @@ const Form = ({ type, work, setWork, handleSubmit }) => {
                     />
                 </div>
                 <button className="btn-gradient mt-4" type="submit">
-                    Publier votre oeuvre
+                    Publier votre œuvre
                 </button>
             </form>
         </div>

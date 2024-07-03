@@ -176,6 +176,7 @@ const WorkCard = ({ work, userId, updateWishlist, onDeleteWork }) => {
             sx={{
               borderRadius: "50%",
               backgroundColor: "white",
+              color: "black",
               padding: "5px",
               fontSize: "30px",
             }}
@@ -193,16 +194,17 @@ const WorkCard = ({ work, userId, updateWishlist, onDeleteWork }) => {
             <Favorite
               sx={{
                 borderRadius: "50%",
-                color: "red",
+                backgroundColor: "white",
+                color: "#FF1493",
                 padding: "5px",
                 fontSize: "40px",
-                width:"15px"
               }}
             />
           ) : (
             <Favorite
               sx={{
                 borderRadius: "50%",
+                backgroundColor: "white",
                 color:"#A1A1A1",
                 padding: "5px",
                 fontSize: "40px",

@@ -1,8 +1,7 @@
 // components/Navbar.jsx
 "use client";
 import "@styles/Navbar.scss";
-import { Person, Search, ShoppingCart } from '@mui/icons-material';
-import { IconButton } from '@mui/material';
+import { Person, ShoppingCart } from '@mui/icons-material';
 import { signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';

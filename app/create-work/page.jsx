@@ -83,9 +83,9 @@ const CreateWork = () => {
     
     return (
         <>
-            <title>Poster une oeuvre - Brekor</title>
+            <title>Poster une œuvre - Brekor</title>
             <meta name="description" content="Publiez vos œuvres uniques en ligne et partagez-les avec le monde entier." />
-            <meta name="keywords" content="poster oeuvre, vendre art, artistes amateurs, plateforme d'art en ligne" />
+            <meta name="keywords" content="poster œuvre, vendre art, artistes amateurs, plateforme d'art en ligne" />
             
             <Navbar />
             <div className="navbar-padding-protection"></div>
