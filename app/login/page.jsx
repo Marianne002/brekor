@@ -5,7 +5,6 @@ import "@styles/Login.scss";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
     // Initialize the state variables
@@ -39,11 +38,6 @@ const Login = () => {
             console.log("Error logging in: ", error);
         }
     };
-
-    // Handle Google login
-    // const loginWithGoogle = () => {
-    //     signIn("google", { callbackUrl: "/" });
-    // };
 
     return (
         <>

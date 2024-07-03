@@ -90,7 +90,7 @@ const CreateWork = () => {
             <Navbar />
             <div className="navbar-padding-protection"></div>
             <Form 
-                type="Create"
+                type="Créer"
                 work={work}
                 setWork={setWork}
                 handleSubmit={handleSubmit}

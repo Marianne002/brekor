@@ -3,14 +3,11 @@
 @import "./breakpoints.scss";
 
 .form {
-  padding: 40px 60px 120px;
-
-  @include mm {
-    padding: 40px 20px;
+  h1, h3, h4, label, .alone {
+    color: white;
   }
 
   h1 {
-    color: $blue;
     margin-bottom: 30px;
   }
 
@@ -23,10 +20,6 @@
       padding: 30px 20px;
     }
 
-    h3 {
-      color: $blue;
-      margin: 0;
-    }
 
     .category-list {
       margin: 20px 0 40px;
@@ -49,12 +42,12 @@
         cursor: pointer;
     
         &:hover {
-          color: $pinkred
+          color: #FF1493;
         }
       }
 
       .selected {
-        color: $pinkred;
+        color: #FF1493;
       }
     }
 
@@ -86,7 +79,7 @@
           cursor: pointer;
 
           &:hover {
-            color: $pinkred
+            color: $pinkred;
           }
         }
       }
@@ -97,7 +90,7 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        border: 1px dashed $grey;
+        border: 1px dashed grey;
 
         .icon {
           font-size: 60px;
@@ -130,13 +123,13 @@
 
     .title {
       input {
-        border: 1px solid $grey;
+        border: 1px solid grey;
         padding: 15px 30px;
         border-radius: 10px;
         font-size: 16px;
         font-weight: 600;
         width: 100%;
-
+        color: black !important;
         &:focus {
           outline: none;
         }
@@ -151,7 +144,7 @@
 
       input,
       textarea {
-        border: 1px solid $grey;
+        border: 1px solid grey;
         padding: 15px 30px;
         border-radius: 10px;
         font-size: 16px;
@@ -184,16 +177,6 @@
       .price {
         width: 200px;
       }
-    }
-  }
-
-  .submit_btn {
-    margin-top: 40px;
-
-    @include buttonStyle;
-
-    &:hover {
-      box-shadow: 0 0 10px 3px rgb(117, 117, 117);
     }
   }
 }

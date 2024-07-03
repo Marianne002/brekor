@@ -61,10 +61,10 @@ const Form = ({ type, work, setWork, handleSubmit }) => {
     };
 
     return (
-        <div className="form">
-            <h1>{type} Your Work</h1>
+        <div className="container form">
+            <h1>{type} votre publication</h1>
             <form onSubmit={handleSubmit}>
-                <h3>Which of these categories best describes your work?</h3>
+                <h3>Quelle catégorie décrit le mieux votre oeuvre ?</h3>
                 <div className="category-list">
                     {categories.map((item, index) => (
                         <p
@@ -77,7 +77,7 @@ const Form = ({ type, work, setWork, handleSubmit }) => {
                     ))}
                 </div>
 
-                <h3>Add some photos of your work</h3>
+                <h3>Ajoutez quelques photos</h3>
                 <div className="photos">
                     <input
                         id="image"
@@ -91,7 +91,7 @@ const Form = ({ type, work, setWork, handleSubmit }) => {
                         <div className="icon">
                             <IoIosImages />
                         </div>
-                        <p>Upload from your device</p>
+                        <p>Télécharger depuis votre appareil</p>
                     </label>
 
                     {work.photos.length > 0 && (
@@ -108,18 +108,17 @@ const Form = ({ type, work, setWork, handleSubmit }) => {
                     )}
                 </div>
 
-                <h3>What makes your Work attractive?</h3>
                 <div className="description">
-                    <p>Title</p>
+                    <h4>Titre</h4>
                     <input
                         type="text"
-                        placeholder="Title"
+                        placeholder="Titre"
                         onChange={handleChange}
                         name="title"
                         value={work.title}
                         required
                     />
-                    <p>Description</p>
+                    <h4>Description </h4>
                     <textarea
                         type="text"
                         placeholder="Description"
@@ -128,11 +127,10 @@ const Form = ({ type, work, setWork, handleSubmit }) => {
                         value={work.description}
                         required
                     />
-                    <p>Now, set your PRICE</p>
-                    <span>$</span>
+                    <h4>Prix</h4>
                     <input
                         type="number"
-                        placeholder="Price"
+                        placeholder="Prix"
                         onChange={handleChange}
                         name="price"
                         value={work.price}
@@ -140,8 +138,8 @@ const Form = ({ type, work, setWork, handleSubmit }) => {
                         className="price"
                     />
                 </div>
-                <button className="submit_btn" type="submit">
-                    PUBLISH YOUR WORK
+                <button className="btn-gradient mt-4" type="submit">
+                    Publier votre oeuvre
                 </button>
             </form>
         </div>

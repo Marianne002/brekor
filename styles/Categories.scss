@@ -1,6 +1,4 @@
 // styles/Categories.scss
-@import "./variables.module.scss";
-@import "./breakpoints.scss";
 
 .categories {
   display: flex;
@@ -21,11 +19,11 @@
     cursor: pointer;
 
     &:hover {
-      color: $pinkred
+      color: #FF1493;
     }
   }
 
   .selected {
-    color: $pinkred
+    color: #FF1493;
   }
 }

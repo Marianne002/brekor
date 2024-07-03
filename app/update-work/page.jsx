@@ -123,7 +123,7 @@ const UpdateWorkContent = () => {
             <Navbar />
             <div className="navbar-padding-protection"></div>
             <Form
-                type="Edit"
+                type="Modifier"
                 work={work}
                 setWork={setWork}
                 handleSubmit={handleSubmit}

@@ -4,7 +4,7 @@ import WorkCard from "./WorkCard";
 
 const WorkList = ({ data, userId, updateWishlist, onDeleteWork }) => {
   return (
-    <div className="work-list">
+    <div className="container work-list">
       {data.map((work) => (
         <WorkCard
           key={work._id}

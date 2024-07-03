@@ -1,39 +1,15 @@
 // styles/WorkDetails.scss
-@import "./variables.module.scss";
-@import "./breakpoints.scss";
-
 .work-details {
   color: white;
-  padding: 40px 80px 120px;
 
-  @include xl {
-    padding: 40px 80px 120px;
-  }
-
-  @include lg {
-    padding: 40px 50px 120px;
-  }
-
-  @include sm {
-    padding: 40px 20px 120px;
+  p {
+    padding: 0;
   }
 
   .title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    @include sm {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 15px;
-    }
-
-    h1 {
-      @include sm {
-        font-size: 26px;
-      }
-    }
 
     .save {
       display: flex;
@@ -45,10 +21,6 @@
         font-size: 20px;
         font-weight: 700;
         margin: 0;
-
-        &:hover {
-          color: $pinkred;
-        }
       }
     }
   }
@@ -164,6 +136,7 @@
   }
 
   .info hr {
-    border: 2px solid black;
+    border: 1px solid black;
+    opacity: 1;
   }
 }

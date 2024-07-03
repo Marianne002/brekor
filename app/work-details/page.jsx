@@ -125,7 +125,7 @@ const WorkDetailsContent = () => {
 
             <Navbar />
             <div className="navbar-padding-protection"></div>
-            <div className="work-details">
+            <div className="container work-details">
                 <div className="title">
                     <h1>{work.title}</h1>
                     {work?.creator?._id === userId ? (
